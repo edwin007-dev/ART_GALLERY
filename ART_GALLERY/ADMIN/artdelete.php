@@ -13,7 +13,6 @@ if(isset($_GET["aid"]))
     else{
         echo "<script>alert('Deletion failed!!')</script>";
 
-        
     }
 }
 ?>
