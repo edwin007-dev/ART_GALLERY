@@ -1,4 +1,4 @@
-# 🎨 Art Gallery | E-Commerce Web Application
+#  Art Gallery | E-Commerce Web Application
 
 A full-stack e-commerce web application developed using **PHP, MySQL, JavaScript, HTML, and CSS**, designed to provide an online platform for showcasing, browsing, and purchasing artworks.
 
