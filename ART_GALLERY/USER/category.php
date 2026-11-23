@@ -34,11 +34,18 @@ $obj=new dboperation();
             $sqlquery = "select * from tbl_category";
             $result = $obj->executequery($sqlquery);
             while ($display = mysqli_fetch_array($result)) {
+                $image = $display['Image'];
+                $imgSrc = "../upload/" . $image;
+                if (!file_exists($imgSrc) && file_exists("../GUEST/images/ART_IMAGES/" . $image)) {
+                    $imgSrc = "../GUEST/images/ART_IMAGES/" . $image;
+                } elseif (!file_exists($imgSrc) && file_exists("../GUEST/images/ART_IMAGES/" . $display['Category_name'] . ".jpg")) {
+                    $imgSrc = "../GUEST/images/ART_IMAGES/" . $display['Category_name'] . ".jpg";
+                }
 ?>
                                   
-						<div class="col-lg-3 col-md-6 single-blog">
-                        <a href="artwork.php?category_id=<?php echo $display['Category_id']; ?>"><div class="thumb">
-								<img class="img-fluid" src="../upload/<?php echo $display['Image']; ?>" alt="" style="height:250px;"> 					
+						<div class="col-lg-3 col-md-6 single-blog mb-4">
+                        <a href="artwork.php?category_id=<?php echo $display['Category_id']; ?>"><div class="thumb" style="overflow: hidden; border-radius: 5px;">
+								<img class="img-fluid" src="<?php echo $imgSrc; ?>" alt="<?php echo htmlspecialchars($display['Category_name']); ?>" style="height:250px; width:100%; object-fit:cover;"> 					
 							</div>
 							<p class="date"></p>
 							<h4><?php echo $display['Category_name']; ?></h4></a>						

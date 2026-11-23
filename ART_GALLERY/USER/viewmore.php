@@ -46,7 +46,16 @@ function amountcalculation() {
       <div class="single-info row mt-40">
         <div class="col-lg-6 col-md-12 text-center">
           <div class="info-thumb">
-            <img src="../upload/<?php echo $display['image']; ?>" class="img-fluid rounded" alt="">
+            <?php
+            $img = $display['image'];
+            $imgSrc = "../upload/" . $img;
+            if (!file_exists($imgSrc) && file_exists("../GUEST/images/ART_IMAGES/" . $img)) {
+                $imgSrc = "../GUEST/images/ART_IMAGES/" . $img;
+            } elseif (!file_exists($imgSrc) && file_exists("../GUEST/images/ART_IMAGES/" . $display['art_name'] . ".jpg")) {
+                $imgSrc = "../GUEST/images/ART_IMAGES/" . $display['art_name'] . ".jpg";
+            }
+            ?>
+            <img src="<?php echo $imgSrc; ?>" class="img-fluid rounded" alt="<?php echo htmlspecialchars($display['art_name']); ?>">
           </div>
         </div>
         <div class="col-lg-6 col-md-12">
