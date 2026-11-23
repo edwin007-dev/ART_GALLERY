@@ -138,8 +138,6 @@ Through this project, I gained hands-on experience in:
 
 **[Edwin Benson](https://github.com/edwin007-dev)**
 
-BCA Graduate | Software Developer
-
 Developed as an academic project to demonstrate practical knowledge of full-stack web development, database management, and e-commerce application workflows.
 
 ---
