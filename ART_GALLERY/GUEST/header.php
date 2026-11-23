@@ -52,9 +52,9 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <a href="#" class="text-white"><span class="mr-2 text-white icon-envelope-open-o"></span> <span class="d-none d-md-inline-block">edwinbenson0154@gmail.com</span></a>
+            <a href="#" class="text-white"><span class="mr-2 text-white icon-envelope-open-o"></span> <span class="d-none d-md-inline-block">artgallery@gmail.com</span></a>
             <span class="mx-md-2 d-inline-block"></span>
-            <a href="#" class="text-white"><span class="mr-2 text-white icon-phone"></span> <span class="d-none d-md-inline-block">6282981318</span></a>
+            <a href="#" class="text-white"><span class="mr-2 text-white icon-phone"></span> <span class="d-none d-md-inline-block">9876543210</span></a>
             
 
             <div class="float-right">
