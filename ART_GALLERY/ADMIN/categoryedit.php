@@ -7,7 +7,6 @@ $result = $obj->executequery($sqlquery);
 $display = mysqli_fetch_array($result);
 ?>
 
-<div class="main-panel">
     <div class="content-wrapper">
         <div class="row">
             <div class="col-6 grid-margin stretch-card">

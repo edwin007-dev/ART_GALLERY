@@ -3,7 +3,6 @@ include_once ("header.php");
 ?>
 
 
-<div class="main-panel">
     <div class="content-wrapper">
         <div class="row">
             <div class="col-6 grid-margin stretch-card">

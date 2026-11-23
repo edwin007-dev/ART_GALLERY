@@ -5,7 +5,6 @@ $obj = new dboperation();
 ?>
 
 
-<div class="main-panel">
     <div class="content-wrapper">
         <div class="row">
             <div class="col-6 grid-margin stretch-card">

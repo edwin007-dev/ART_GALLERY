@@ -2,7 +2,6 @@
 include_once ("header.php");
 ?>
 <!-- partial -->
-<div class="main-panel">
     <div class="content-wrapper">
         <div class="row">
             <div class="col-12 col-xl-6 grid-margin stretch-card">

@@ -18688,7 +18688,8 @@ html {
 }
 
 .container-scroller {
-  overflow: hidden;
+  overflow: visible;
+  min-height: 100vh;
 }
 
 pre {
@@ -20447,12 +20448,14 @@ dl li {
   padding-left: 0;
   padding-right: 0;
   width: calc(100% - 240px);
+  margin-left: 240px;
   transition: width 0.25s ease, margin 0.25s ease;
 }
 
 @media (max-width: 991px) {
   .page-body-wrapper {
     width: 100%;
+    margin-left: 0;
   }
 }
 
@@ -20467,7 +20470,16 @@ dl li {
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  min-height: calc(100vh - 262px);
+  width: calc(100% - 240px);
+  flex-grow: 1;
+  transition: width 0.25s ease;
+}
+
+@media (max-width: 991px) {
+  .main-panel {
+    width: 100%;
+  }
 }
 
 .navbar-fixed-top .main-panel {
@@ -20506,21 +20518,52 @@ dl li {
 
 /* Sidebar */
 .sidebar {
-  min-height: calc(100vh - 65px);
+  min-height: 100vh;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
   background: #223e9c;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
   padding: 0;
-  z-index: 11;
+  z-index: 1020;
   transition: width 0.25s ease, background 0.25s ease;
   -webkit-transition: width 0.25s ease, background 0.25s ease;
   -moz-transition: width 0.25s ease, background 0.25s ease;
   -ms-transition: width 0.25s ease, background 0.25s ease;
   width: 240px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-shrink: 0;
+}
+
+@media (max-width: 991px) {
+  .sidebar {
+    left: auto;
+  }
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #1c3380;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #3957be;
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #4d6fd6;
 }
 
 .sidebar .nav {
-  overflow: hidden;
+  overflow: visible;
   flex-wrap: nowrap;
   flex-direction: column;
   margin-bottom: 60px;
@@ -21027,6 +21070,7 @@ dl li {
 @media (min-width: 992px) {
   .sidebar-icon-only .page-body-wrapper {
     width: calc(100% - 70px);
+    margin-left: 70px;
   }
   .sidebar-icon-only .navbar-mini.fixed-top {
     left: 70px;

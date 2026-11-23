@@ -283,3 +283,5 @@ if(!isset($_SESSION["loginid"]))
           </ul>
         </div>
       </nav>
+      <!-- partial -->
+      <div class="main-panel">
